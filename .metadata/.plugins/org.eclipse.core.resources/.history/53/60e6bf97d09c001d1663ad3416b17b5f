@@ -1,0 +1,5 @@
+package hbedv.sysjava;
+
+public @interface WebServlet {
+
+}
