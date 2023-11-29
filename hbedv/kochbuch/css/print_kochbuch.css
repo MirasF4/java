@@ -1,0 +1,283 @@
+
+body {
+	background-color: white;
+	font-family: Sylfaen, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	color: black;
+}
+
+td, th {
+	font-family: Sylfaen, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	color: black;
+}
+
+a {
+	color: black;
+}
+
+form {
+	background-color: white;
+	font-family: Sylfaen, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+pre.kb {
+	font-family: Sylfaen, Georgia, "Times New Roman", Times, serif;	
+	font-size: 12pt; 
+	background-color:white;
+	color: black;
+}
+
+button.kb 
+{
+	background-color: rgb(102,0,0);	
+	border-color: rgb(153,153,102); 
+	color: white;
+}
+
+
+a.ButtonItem {
+  color : #000000;
+  text-decoration : none;
+  background-color : #FDFAD6;
+  margin: 4px;
+  padding: 3px;
+  border: thin outset;
+  width: 200px;
+  text-align: center;
+  font-weight :bold;
+  height : auto;
+  font-family: Sylfaen, Arial, Helvetica, sans-serif;
+  font-size : '100%';
+}
+
+
+/**
+ *
+ */
+a.ButtonItem:hover {
+  color : #1133FF;
+  text-decoration :none;
+  background-color : #FEFCE7;
+  border: thin inset;
+  cursor: hand;
+}
+
+.TableBasic
+{
+  font-size: 100%;
+  height: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  left: 0px;
+  top: 0px;
+  border: 0px none;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+table.BorderGrid
+{
+	border-left: 1px solid #333A48;
+	border-top: 1px solid #333A48;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+	empty-cells: show;
+	border-collapse: collapse;
+	caption-side: top;
+}
+
+.BorderGrid .Border caption 
+{
+	caption-side: top;
+	text-align: left;
+	margin-top: 4em;
+	font-family: Sylfaen; 
+	font-size: 14px; 
+	color: #333A48; 
+	font-weight:bold; 
+}
+
+.BorderGrid th
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	background-color: silver;
+	
+	text-decoration: none; 
+	font-weight: bold; 
+	overflow: auto;
+	display: inline;
+	text-align: left;
+	padding-left: 10px;
+	border-right: 1px solid #333A48;
+	border-bottom: 1px solid #333A48;
+	padding-left: 10px;
+	padding-right: 10px;
+	clear: none;
+}
+
+.BorderGrid td
+{
+	font-family: Sylfaen;
+	font-size: 12pt; 
+	background-color:white;
+	font-weight: bold;
+	color: black;
+	text-decoration:none; 
+	font-weight:normal;
+	overflow: auto;
+	display: inline;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+.title {
+	font-family: Sylfaen, Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	line-height: 30px;
+  background-color: #990000; color: #FFFF66;
+}
+
+.subtitle {
+	font-family: Sylfaen, Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: bold;
+  color: #660000; font-style: oblique;
+}
+
+.header {
+	font-family: Sylfaen, Georgia, "Times New Roman", Times, serif;
+	font-size: 24px;
+	background-color: #990000;
+  color: #FFFF66;
+}
+
+.nav {
+	font-family: Sylfaen, Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #CCCC66;
+}
+
+.navLink {
+	font-family: Sylfaen, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #DEDECA;
+}
+
+a:hover {
+	color: #DEDECA;
+	background-color: white;
+}
+
+.sidebar {
+	font-family: Sylfaen, Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	line-height: 18px;
+	padding: 3px;
+	background-color: #FFFF99;
+}
+
+.sidebarHeader {
+	font-family: Sylfaen, Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: #FFFF99;
+	background-color: #999933;
+ font-weight: bold;
+}
+
+.sidebarFooter {
+	font-family: Sylfaen, Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	line-height: 18px;
+	background-color: #FFFF99;
+ color: #990000;
+}
+
+.footer {
+  font-family: Sylfaen, Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 22px;
+	color: #333333;
+	background-color: #FFFF99;
+}
+
+.legal {
+	font-family: Sylfaen, Georgia, "Times New Roman", Times, serif;
+	font-size: 12pt;
+	color: #333333;
+}
+
+.box1 {
+	border-width: 2px;
+	border-color: #CCCCCC #333333 #333333 #CCCCCC;
+  border-style: dotted;
+	}
+
+.promo {
+	font-family: Sylfaen, "Times New Roman", Times, serif;
+	color: #000033;
+}
+
+.titlebar {
+	font-family: Sylfaen, "Times New Roman", Times, serif;
+	font-size: 9px;
+	color: #FFFFFF;
+	background-color: #336699;
+}
+
+.dingbat {
+	font-family: Sylfaen, Georgia, "Times New Roman", Times, serif;
+	background-color: #CCCC99;
+ color: #660000; font-weight: bolder; font-size: medium;
+}
+
+
+input.big {
+	width: 100px;
+}
+
+
+input.small {
+	width: 50px;
+}
+
+input.kb {
+	font-family: Sylfaen, Georgia, "Times New Roman", Times, serif;	
+	color:black; 
+	background-color: white;
+	font-size: 15px;
+	font-weight :bold;
+}
+
+
+select.kb {
+	font-family: Sylfaen, Georgia, "Times New Roman", Times, serif;	
+	color:black; 
+	background-color: white;
+	font-size: 15px;
+	font-weight :bold;
+}
+
+FIELDSET
+{
+	border-color:black;
+	border-width:1px;
+	color:black;
+}
+

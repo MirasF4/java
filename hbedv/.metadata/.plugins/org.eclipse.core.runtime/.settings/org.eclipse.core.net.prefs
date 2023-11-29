@@ -1,0 +1,11 @@
+#Sun Nov 25 12:29:35 CET 2007
+proxyData/SOCKS/port=3128
+org.eclipse.core.net.hasMigrated=true
+proxyData/HTTP/host=192.168.0.1
+proxyData/HTTP/hasAuth=false
+nonProxiedHosts=127.0.0.1|localhost
+proxiesEnabled=false
+proxyData/HTTP/port=3128
+eclipse.preferences.version=1
+proxyData/SOCKS/hasAuth=false
+proxyData/SOCKS/host=192.168.0.1

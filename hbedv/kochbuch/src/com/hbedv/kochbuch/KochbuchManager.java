@@ -1,0 +1,426 @@
+/*
+ * Created on 24.07.2005
+ *
+ * TODO To change the template for this generated file go to
+ * Window - Preferences - Java - Code Style - Code Templates
+ */
+package com.hbedv.kochbuch;
+
+import java.io.File;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.hbedv.db.ConnectionWrapper;
+import com.hbedv.db.DB;
+import com.hbedv.db.kochbuch.DBKochbuch;
+import com.hbedv.db.kochbuch.KochbuchBean;
+import com.hbedv.frame.AliceSortMap;
+import com.hbedv.frame.AliceSortMapContainer;
+import com.hbedv.frame.Aspect;
+import com.hbedv.frame.BodyManager;
+import com.hbedv.frame.Util;
+
+
+/**
+ * @author hubert
+ *
+ * TODO To change the template for this generated type comment go to
+ * Window - Preferences - Java - Code Style - Code Templates
+ */
+@SuppressWarnings("unchecked")
+public class KochbuchManager extends BodyManager {
+
+    
+    private AliceSortMap asmRezeptListe = null;
+    private AliceSortMap asmMenueListe = null;
+    private int asmRow = 0;
+    
+    
+    public int getAsmRow() {
+        return asmRow;
+    }
+ 
+    public void setAsmRow(int i) {
+        asmRow = i;
+    }
+    
+    public int computeAsmRow (int add) {
+        int tmp = asmRow + add;
+        if (tmp > -1 && tmp < getAsmRezeptListe().getSize()) {
+            asmRow = asmRow + add;
+        }
+        return asmRow;
+    }
+    
+
+    public int findRow(Integer r_id) {
+        AliceSortMap asm = getAsmRezeptListe();
+        ArrayList rList = asm.getKeys(KochbuchBean.AsmRezept.KEY_ID);
+        return rList.indexOf(r_id);
+    }
+    
+    
+    public int findRow(Integer m_id, String bez) {
+        AliceSortMap asm = getAsmRezeptListe();
+        
+		ArrayList nKeys = new ArrayList();
+		nKeys.add(new Integer(KochbuchBean.AsmRezept.KEY_MEN_ID));
+		nKeys.add(new Integer(KochbuchBean.AsmRezept.KEY_BEZ));
+
+		ArrayList nSearch = new ArrayList();
+		nSearch.add(m_id);
+		nSearch.add(bez);
+		int row = asm.indexOfKeys(nKeys, nSearch);
+        return row;
+    }
+    
+    
+    public AliceSortMap getAsmRezeptListe() {
+        if (asmRezeptListe == null) asmRezeptListe = KochbuchBean.AsmRezept.getEmptyASM();
+        return asmRezeptListe;
+    }
+    
+    public int getSizeRezeptListe() {
+    	int result = 0;
+        if (asmRezeptListe != null) {
+        	result = asmRezeptListe.getSize();
+        }
+        return result;
+    }
+    
+    public void setAsmRezeptListe (AliceSortMap asm) {
+        asmRezeptListe = asm;
+    }
+    
+
+    public AliceSortMap getAsmMenueListe() {
+        if (asmMenueListe == null) asmMenueListe = KochbuchBean.AsmMenue.getEmptyASM();
+        return asmMenueListe;
+    }
+    
+    public void setAsmMenueListe (AliceSortMap asm) {
+        asmMenueListe = asm;
+    }
+
+    
+    /**
+	 * @param newClient
+	 */
+	public KochbuchManager(ClientKochbuch newClient) {
+		super(newClient);
+	}
+	
+	 public void init() throws Exception {
+	     super.init();
+	    	     
+	 }
+
+	
+	/* (non-Javadoc)
+	 * @see com.hbedv.frame.Manager#getDB()
+	 */
+	public DB getDB() throws SQLException {
+		// TODO Auto-generated method stub
+	    return new DBKochbuch();
+	}
+
+	/* (non-Javadoc)
+	 * @see com.hbedv.frame.Manager#existsValues(com.hbedv.db.ConnectionWrapper, java.lang.Object, com.hbedv.frame.Aspect)
+	 */
+	public boolean existsValues(ConnectionWrapper connection, Object bez,Aspect aspects) 
+	throws Exception {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public String getDeleteQuestion() {
+	    return "Wollen Sie dieses Rezept wirklich löschen?"; 
+	}
+	
+	
+	// Holt den Filenamen für neue Bilder!!!
+	public String getPicFileName() {
+	    String result = "";
+	    AliceSortMap asm = this.getAsmRezeptListe();
+	    int row = this.getAsmRow();
+	    if (row > -1 && row < asm.getSize()) {
+	        Integer id = (Integer) asm.getKeys(KochbuchBean.AsmRezept.KEY_ID).get(row);
+	        result = "pic_" + id.toString() + ".jpg";
+	    }
+	    return result;
+	}
+	
+
+	//Gibt den Filenamen oder Filename für leeres Bild zurück
+	public String getPicName() {
+	    String result = ((ClientKochbuch)client).getAppRootUrl() + "/images/data/nopic.jpg";
+	    AliceSortMap asm = this.getAsmRezeptListe();
+	    int row = this.getAsmRow();
+	    if (row > -1 && row < asm.getSize()) {
+	        Integer id = (Integer) asm.getKeys(KochbuchBean.AsmRezept.KEY_ID).get(row);
+	        String tmpFile = "pic_" + id.toString() + ".jpg";
+	        String abstrPath = ((ClientKochbuch)client).getAppRootDir() + "images/data/" + tmpFile;
+	        File f = new File(abstrPath);
+	        if (f.isFile()) {
+	            result = ((ClientKochbuch)client).getAppRootUrl() + "/images/data/" + tmpFile;
+	        }
+	    }
+	    return result;
+	}
+
+	public String getRezeptNameJSP() {
+		String n = getRezeptName();
+		int l = n.length();
+		if (l > 35) n = n.substring(0,35);
+		n = n.replaceAll(" ", "&nbsp;");
+		return n;
+	}
+	
+	public String getRezeptName() {
+	    String result = "";
+	    int row = this.getAsmRow();
+	    AliceSortMap asm = this.getAsmRezeptListe();
+	    if (row > -1 && row < asm.getSize()) {
+	        result = (String) asm.getKeys(KochbuchBean.AsmRezept.KEY_BEZ).get(row);
+	    }
+	    if (result == null) result = "";
+	    return result;
+	}
+
+	
+	public Integer getRezId() {
+	    Integer result = new Integer(0);
+	    int row = this.getAsmRow();
+	    AliceSortMap asm = this.getAsmRezeptListe();
+	    if (row > -1 && row < asm.getSize()) {
+	        result = (Integer) Util.nvl(asm.getKeys(KochbuchBean.AsmRezept.KEY_ID).get(row),new Integer(0));
+	    }
+	    return result;
+	}
+
+	public Integer getMenId() {
+	    Integer result = new Integer(0);
+	    int row = this.getAsmRow();
+	    AliceSortMap asm = this.getAsmRezeptListe();
+	    if (row > -1 && row < asm.getSize()) {
+	        result = (Integer) Util.nvl(asm.getKeys(KochbuchBean.AsmRezept.KEY_MEN_ID).get(row),new Integer(0));
+	    }
+	    return result;
+	}
+	
+	public String getMenueBez() {
+	    String result = "Keine Daten vorhanden!";
+	    int row = this.getAsmRow();
+	    AliceSortMap asm = this.getAsmRezeptListe();
+	    if (row > -1 && row < asm.getSize()) {
+	        result = (String) asm.getKeys(KochbuchBean.AsmRezept.KEY_MENUE_BEZ).get(row);
+	    }
+	    return result;
+	}
+	
+	public String getZubereitung() {
+	    String result = "";
+	    int row = this.getAsmRow();
+	    AliceSortMap asm = this.getAsmRezeptListe();
+	    if (row > -1 && row < asm.getSize()) {
+	        result = (String) asm.getValues(KochbuchBean.AsmRezept.VALUE_ZUBEREITUNG).get(row);
+	    }
+	    return result;
+	}
+
+	public String getKommentar() {
+	    String result = "";
+	    int row = this.getAsmRow();
+	    AliceSortMap asm = this.getAsmRezeptListe();
+	    if (row > -1 && row < asm.getSize()) {
+	        result = (String) asm.getValues(KochbuchBean.AsmRezept.VALUE_KOMMENTAR).get(row);
+	    }
+	    return result;
+	}
+	
+	public AliceSortMap getZutaten() {
+	    AliceSortMap result = KochbuchBean.AsmZutaten.getEmptyASM();
+	    int row = this.getAsmRow();
+	    AliceSortMap asm = this.getAsmRezeptListe();
+	    if (row > -1 && row < asm.getSize()) {
+	        result = (AliceSortMap) asm.getValues(KochbuchBean.AsmRezept.VALUE_ZUTATEN).get(row);
+	    }
+	    return result;
+	}
+
+	//**************************************************
+	
+	
+	public void setRezeptName(String s) {
+	    int row = this.getAsmRow();
+	    AliceSortMap asm = this.getAsmRezeptListe();
+	    if (row > -1 && row < asm.getSize()) {
+	        asm.setKey(row,KochbuchBean.AsmRezept.KEY_BEZ,s);
+	    }
+	}
+
+	
+	public void setRezId(Integer i) {
+	    int row = this.getAsmRow();
+	    AliceSortMap asm = this.getAsmRezeptListe();
+	    if (row > -1 && row < asm.getSize()) {
+	        asm.setKey(row,KochbuchBean.AsmRezept.KEY_ID,i);
+	    }
+	}
+
+	public void setMenId(Integer i) {
+	    int row = this.getAsmRow();
+	    AliceSortMap asm = this.getAsmRezeptListe();
+	    if (row > -1 && row < asm.getSize()) {
+	        asm.setKey(row,KochbuchBean.AsmRezept.KEY_MEN_ID,i);
+	    }
+	}
+	
+	public void setMenueBez(String s) {
+	    int row = this.getAsmRow();
+	    AliceSortMap asm = this.getAsmRezeptListe();
+	    if (row > -1 && row < asm.getSize()) {
+	        asm.setKey(row,KochbuchBean.AsmRezept.KEY_MENUE_BEZ,s);
+	    }
+	}
+	
+	public void setZubereitung(String s) {
+	    int row = this.getAsmRow();
+	    AliceSortMap asm = this.getAsmRezeptListe();
+	    if (row > -1 && row < asm.getSize()) {
+	        asm.setValue(row,KochbuchBean.AsmRezept.VALUE_ZUBEREITUNG,s);
+	    }
+	}
+
+	public void setKommentar(String s) {
+	    int row = this.getAsmRow();
+	    AliceSortMap asm = this.getAsmRezeptListe();
+	    if (row > -1 && row < asm.getSize()) {
+	        asm.setValue(row,KochbuchBean.AsmRezept.VALUE_KOMMENTAR,s);
+	    }
+	}
+	
+	public void setZutaten(AliceSortMap zList) {
+	    int row = this.getAsmRow();
+	    AliceSortMap asm = this.getAsmRezeptListe();
+	    if (row > -1 && row < asm.getSize()) {
+	        asm.setValue(row,KochbuchBean.AsmRezept.VALUE_ZUTATEN,zList);
+	    }
+	}
+
+	//*******************************************************************
+	
+	public ArrayList writeRezept()
+	throws SQLException {
+		ArrayList result = new ArrayList();
+	    int row = this.getAsmRow();
+	    AliceSortMap asm = this.getAsmRezeptListe();
+	    AliceSortMapContainer asmc = asm.getAliceSortMapContainer(row);
+        ConnectionWrapper connection = getDB().getConnection();
+        KochbuchBean kb = new KochbuchBean();
+        try {
+        	result = kb.writeRezept(connection,asmc);
+        	if (result.size() > 0) {
+        		String newName = (String) result.get(0);
+        		asm.setKey(row,KochbuchBean.AsmRezept.KEY_BEZ,newName);
+        	}
+        	else {
+        		//result = "";
+        	}
+            Integer id = (Integer) asmc.getKey(KochbuchBean.AsmRezept.KEY_ID);
+            asm.setKey(row,KochbuchBean.AsmRezept.KEY_ID,id);
+            this.setAsmRezeptListe(asm);
+        }
+		finally {
+            connection.close();
+        }
+		return result;
+	}
+	
+	
+	public void writeLog(AliceSortMap asm)
+	throws SQLException {
+        ConnectionWrapper connection = getDB().getConnection();
+        KochbuchBean kb = new KochbuchBean();
+        try {
+        	kb.writeLog(connection,asm);
+        }
+		finally {
+            connection.close();
+        }
+	}
+	
+	
+	
+	public void deleteRezept(Integer r_id)
+	throws SQLException {
+        ConnectionWrapper connection = getDB().getConnection();
+        KochbuchBean kb = new KochbuchBean();
+        try {
+            kb.deleteRezept(connection, r_id);
+	        String tmpFile = "pic_" + r_id.toString() + ".jpg";
+	        String abstrPath = ((ClientKochbuch)client).getAppRootDir() + "images/data/" + tmpFile;
+	        File f = new File(abstrPath);
+	        if (f.isFile()) {
+	            boolean deleteOk = f.delete();
+	            if (!deleteOk) {
+	            	throw new SQLException("Fehler beim Löschen von " + tmpFile);
+	            }
+	        }
+        }
+        finally {
+            connection.close();
+        }
+	}
+	
+	public void readRezept(int row)
+	throws SQLException {
+	    AliceSortMap asm = this.getAsmRezeptListe();
+	    if (row >-1 && row < asm.getSize()) {
+	        ConnectionWrapper connection = getDB().getConnection();
+	        KochbuchBean kb = new KochbuchBean();
+	        try {
+	            kb.readRezept(connection,row,asm);
+	            this.setAsmRezeptListe(asm);
+	        }
+	        finally {
+	            connection.close();
+	        }
+	    }
+	}
+	
+	public void readRezeptList (int men_id) 
+	throws SQLException {
+	    ConnectionWrapper connection = getDB().getConnection();
+	    KochbuchBean kb = new KochbuchBean();
+        try {
+            AliceSortMap asm = kb.readRezeptList(connection,new Integer(men_id));
+            this.setAsmRow(0);
+            this.setAsmRezeptListe(asm);
+        }
+        finally {
+            connection.close();
+        }
+        this.readRezept(0);
+	}
+	
+	
+	
+	public AliceSortMap readMenueList() 
+	throws SQLException {
+	    AliceSortMap asm = this.getAsmMenueListe();
+	    if (asm.getSize() < 1) {
+	        ConnectionWrapper connection = getDB().getConnection();
+	        KochbuchBean kb = new KochbuchBean();
+	        try {
+	            asm = kb.readMenues (connection);
+	            this.setAsmMenueListe(asm);
+	        }
+	        finally {
+	            connection.close();
+	        }
+	    }
+        return asm;
+	}
+	
+}

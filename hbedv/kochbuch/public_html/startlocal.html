@@ -1,0 +1,46 @@
+<html>
+<link rel="STYLESHEET" type="text/css" href="http://localhost:8080/kochbuch/css/kochbuch.css">
+<head>
+<SCRIPT>
+
+	function resizeWindow() {
+		window.moveTo(0,0);
+		var width  = window.screen.availWidth;
+		var height = window.screen.availHeight;
+		if (width > 1140)
+  			width = 1140;
+
+		if (height > 820)
+  			height = 820;
+		window.resizeTo(width, height);
+	}
+	
+	function startWindow() {
+	  	win = window.open("","","toolbar=no,location=no,"+
+  			"directories=no,status=yes,menubar=no,scrollbars=no,resizable=no,"+
+  			"copyhistory=no");
+			win.moveTo(0,0);
+  			win.resizeTo(1140,820);
+  			win.location.href="http://localhost:8080/kochbuch/public_html/kochbuch.html";
+	}
+
+
+  
+</SCRIPT>
+<title></title>
+</head>
+
+<form NAME="loginForm" METHOD="post" ACTION="" target="_top">
+	<table width="100%">
+	<tr>
+	<td width="100%" height="100px" style="vertical-align:middle;text-align:center">
+	<a href="javascript:startWindow()" style="font-size:12pt;">
+	<img src="http://localhost:8080/kochbuch/images/mbutton_start.gif" border="0" alt="Start">
+	</a>
+	</tr>
+	</table>
+
+</form>
+</div>
+</body>
+</html>

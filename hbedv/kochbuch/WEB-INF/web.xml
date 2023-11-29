@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app>
+    <servlet>
+        <servlet-name>KochbuchServlet</servlet-name>
+        <servlet-class>com.hbedv.kochbuch.KochbuchServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>KochbuchServlet</servlet-name>
+        <url-pattern>/kochbuch</url-pattern>
+    </servlet-mapping>
+</web-app>
+
+
+

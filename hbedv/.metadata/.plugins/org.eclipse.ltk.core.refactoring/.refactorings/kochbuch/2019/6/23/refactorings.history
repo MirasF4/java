@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;kochbuch/build/clean.bat&apos; to &apos;clean.cmd&apos;" description="Rename resource &apos;clean.bat&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="build/clean.bat" name="clean.cmd" stamp="1559553814788" updateReferences="true"/>
+</session>

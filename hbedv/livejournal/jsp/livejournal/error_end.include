@@ -1,0 +1,20 @@
+<script type="text/javascript">
+//<!--
+	var errorText = "<%=errorText%>";
+	if (errorText != "") {
+		alert(errorText);
+		document.getElementById("<%=idObject%>").focus();
+	}
+//-->
+</script>
+
+<%
+if (errorText.indexOf("[Sybase][ODBC Driver]") > -1) {
+	request.getSession().invalidate();
+	%>
+	<script type="text/javascript">
+		window.close();
+	</script>
+	<%
+}
+%>

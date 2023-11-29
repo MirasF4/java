@@ -1,0 +1,645 @@
+/******************************************************************************
+ *  1) jede marke (fabrikat) hat jeweils nur ein css.
+ *
+ *@Source      $Source: D:/cvs_src/java/hbedv/kochbuch/css/hbedv.css,v $
+ *@Revision    $Revision: 1.1.1.1 $
+ *@Change      Last Change: $Author: hubert $; $Date: 2006/02/25 12:27:26 $
+ *@created     orn; 16. April 2002
+ *****************************************************************************/
+
+
+/**
+ *
+ */
+body {
+  font-family : Verdana, Arial, Helvetica;
+  background-color : #FFFFFF;
+  margin : 0;
+  padding : 0;
+  font-size : 11px;
+}
+
+
+/**
+ *
+ */
+
+.h1 { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #333A48; text-decoration:none;  font-weight: normal; }
+
+
+/**
+ *
+ */
+.h2 { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #333A48; text-decoration:none;  font-weight: normal;  }
+
+
+/**
+ *
+ */
+a {
+ font-family: Verdana, Arial, Helvetica, sans-serif; 
+ font-size: 11px; 
+ color: #333A48; 
+ text-decoration:none; 
+ font-weight:bold;
+}
+
+a:hover {
+  font-family : Verdana, Arial, Helvetica,  sans-serif; 
+  font-size: 11px; 
+  color : #708090;
+  text-decoration:none; 
+  font-weight:bold; 
+}
+
+a.SprungMarke  {
+ font-family: Verdana, Arial, Helvetica, sans-serif; 
+ font-size: 11px; 
+ color: #EC2700; 
+ text-decoration:none; 
+ font-weight:bold; 
+}
+
+a.SprungMarke:hover {
+  font-family : Verdana, Arial, Helvetica,  sans-serif; 
+  font-size: 11px; 
+  color : #708090;
+  text-decoration:none; 
+  font-weight:bold; 
+}
+
+
+/**
+ *
+ */
+a.ButtonItem {
+  color : #000000;
+  text-decoration : none;
+  background-color : #FDFAD6;
+  margin: 4px;
+  padding: 3px;
+  border: thin outset;
+  width: '100%';
+  text-align: center;
+  font-weight :bold;
+  height : auto;
+  font-size : '100%';
+}
+
+
+/**
+ *
+ */
+a.ButtonItem:hover {
+  color : #1133FF;
+  text-decoration :none;
+  background-color : #FEFCE7;
+  border: thin inset;
+  cursor: hand;
+}
+
+
+/**
+ * typical aliceuse: UIFrameMenueItem
+ * (in all WebApps)
+ */
+a.TabItem {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	color: #000000; 
+	text-decoration:none; 
+	font-weight: normal;
+}
+
+
+
+/**
+ *
+ */
+a.TabItem:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	color: #EC2700; 
+	text-decoration:none; 
+	font-weight: normal;
+}
+
+a.TabItemActive {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	color: #EC2700; 
+	text-decoration:none; 
+	font-weight: normal;
+}
+
+a.TabItemActive:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	color: #EC2700; 
+	text-decoration:none; 
+	font-weight: normal;
+}
+
+
+/**
+ *
+ */
+a.Ast
+{
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 11px; 
+  color: #333A48; 
+  text-decoration:none; 
+  font-weight:bold; }
+}
+
+/**
+ *
+ */
+a.Ast:hover
+{
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 11px; 
+  color : #708090;
+  text-decoration:none; 
+  font-weight:bold; }
+}
+
+/**
+ * MAC: dem brauchma damit die table die einstellungen des outerobject uebernimmt
+ */
+table
+{
+  font-size : 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  border : 0px none;
+  padding: 0px;
+  border-collapse:collapse;
+}
+
+.TableForm
+{
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+
+/**
+ *
+ */
+input
+{
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 100%;
+  color: #333A48; 
+  text-decoration:none; 
+  border:1px solid #B7BFC7; 
+  height:20px; 
+  background-color:#FFFFFF;
+}
+
+.InputNoBorder
+{
+	border: none;
+  background-color:#F1F2F4;;
+}
+
+/**
+ *
+ */
+select
+{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  color: #333A48; 
+  text-decoration:none; 
+  border:1px solid #B7BFC7; 
+  background-color: #FFFFFF;
+}
+
+
+/**
+ *
+ */
+textarea
+{
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 100%;
+  color: #333A48; 
+  background-color: #FFFFFF;
+  text-decoration:none; 
+  border:1px solid #B7BFC7;
+ }
+
+
+/**
+ *
+ */
+fieldset
+{
+  width: 100%;
+  margin-top: 4px;
+  margin-right: 0px;
+  margin-bottom: 4px;
+  margin-left: 0px;
+  padding-top: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+  background-color:#F1F2F4;
+  border: 1px solid #333A48;
+}
+
+
+/**
+ * (in all WebApps)
+ */
+legend {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	color: #333A48; 
+	background-color:#D4D9DE; 
+	text-decoration:none; 
+	font-weight:bold; 
+}
+
+
+/**
+ * (in all WebApps)
+ */
+.HeadLine {
+  background-color : #10186B;
+  color : #FDFAD6;
+  height : 5;
+}
+
+
+/**
+ * (in all WebApps)
+ */
+.TabsLine {
+  background-color : #10186B;
+  color : #FDFAD6;
+  height : 4;
+  width: 90%;
+}
+
+
+/**
+ * (in all WebApps)
+ */
+.ButtonRow {
+	background-color:#FFD8A1;
+	height : 30px;
+  padding-top:0px; padding-left:0px; padding-right:0px; padding-bottom:0px;
+	vertical-align: middle;
+	color: #333A48;
+}
+
+.SpaceRow {
+	height : 20px;
+}
+
+.SpaceRowSmall {
+	height : 9px;
+}
+
+.CaptionRow {
+	height : 20px;
+	padding-top: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	color: #333A48; 
+	background-color:#FFFFFF; 
+	text-decoration:none; 
+	font-weight:bold; 
+}
+
+.FormRow {
+  background-color:#F1F2F4;
+  color: #333A48;
+  padding-left: 10px;
+  padding-right: 10;
+  padding-top: 10;
+  padding-bottom: 10;
+  border: 1px solid #333A48;
+}
+
+.thRow {
+	height : 20px;
+}
+.tdRow {
+	height : 20px;
+}
+
+
+.AstRow {
+	background-color:#FFB142;
+	color : #FDFAD6;
+	height : 20px;
+    padding-top:0px; padding-left:0px; padding-right:0px; padding-bottom:0px;
+	vertical-align: middle;
+	color: #FFFFFF;
+}
+
+.HeadRow {
+	background-color:#FFE0B4;
+	height : 40px;
+}
+
+.TabRow {
+	background-color:#FFFFFF;
+	height : 20px;
+}
+
+
+/**
+ * (in all WebApps)
+ */
+.TableBasic
+{
+  font-size: 100%;
+  height: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  left: 0px;
+  top: 0px;
+  border: 0px none;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+
+/**
+ * typical aliceuse: Ast; letztes Astl
+ * (in all WebApps)
+ */
+.SmallFont
+{
+  font-size : xx-small;
+  font-family : Verdana, Arial, Helvetica;
+  text-decoration : none;
+  color : #AAAAAA;
+}
+
+
+/**
+ * typical aliceuse: im detail die label rechts
+ * (in all WebApps)
+ */
+table.BorderGrid
+{
+	border-left: 1px solid #333A48;
+	border-top: 1px solid #333A48;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+	empty-cells: show;
+	border-collapse: collapse;
+	caption-side: top;
+}
+
+.BorderGrid .Border caption 
+{
+	caption-side: top;
+	text-align: left;
+	margin-top: 4em;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	color: #333A48; 
+	font-weight:bold; 
+}
+
+.BorderGrid th
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	background-color: #9DA8B3;
+	color: #F1F2F4;
+	text-decoration: none; 
+	font-weight: bold; 
+	overflow: auto;
+	display: inline;
+	text-align: left;
+	padding-left: 10px;
+	border-right: 1px solid #333A48;
+	border-bottom: 1px solid #333A48;
+	padding-left: 10px;
+	padding-right: 10px;
+	clear: none;
+}
+
+.BorderGrid td
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	background-color:#F1F2F4;
+	color: #333A48;
+	text-decoration:none; 
+	font-weight:normal;
+	overflow: auto;
+	display: inline;
+	border-right: 1px solid #333A48;
+	border-bottom: 1px solid #333A48;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+table.Border
+{
+	border-left: 1px solid #333A48;
+	border-top: 1px solid #333A48;
+	border-right: 1px solid #333A48;
+	border-bottom: 1px solid #333A48;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+	empty-cells: show;
+	border-collapse: collapse;
+}
+
+.Border caption 
+{
+	caption-side: top;
+	text-align: left;
+	margin-top: 4em;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	color: #333A48; 
+	font-weight:bold; 
+}
+
+.Border th
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	background-color: #9DA8B3;
+	color: #F1F2F4;
+	text-decoration: none; 
+	font-weight: bold; 
+	overflow: auto;
+	display: inline;
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	border: none;
+	clear: none;
+}
+
+.Border td
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	background-color:#F1F2F4;
+	color: #333A48;
+	text-decoration:none; 
+	font-weight:normal;
+	overflow: auto;
+	display:inline;
+	padding-left: 5px;
+	padding-right: 5px;
+	border: none;
+}
+
+
+table.NoBorderNoGrid
+{
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+	empty-cells: show;
+	border-collapse: collapse;
+	
+}
+
+.NoBorderNoGrid caption 
+{
+	caption-side: top;
+	text-align: left;
+	margin-top: -4em;
+}
+
+.NoBorderNoGrid th
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	background-color: #9DA8B3;
+	color: #F1F2F4;
+	text-decoration: none; 
+	font-weight: bold; 
+	overflow: auto;
+	display: inline;
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	border: none;
+	clear: none;
+}
+
+.NoBorderNoGrid td
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	background-color:#F1F2F4;
+	color: #333A48;
+	text-decoration:none; 
+	font-weight:normal;
+	overflow: auto;
+	display:inline;
+	padding-left: 5px;
+	padding-right: 5px;
+	border: none;
+}
+
+
+/**
+ *
+ */
+.layer{
+  padding: 10px;
+  margin:	5px;
+  border: 1px ridge #14314c;
+  color:	gray;
+  background-color: #fff;
+}
+
+
+.FieldsetMain {
+  background-color:#F1F2F4;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
+
+
+/**
+ *  Markierung bzw. Hervorhebung im DF für alle nicht erreichten Vorgaben.
+ *  (in dealerFocus)
+ */
+td.boeser {
+  font-family : Verdana, Arial, Helvetica;
+  color : #FF0000;
+}
+/* Styles fuer Links und Navigationsbuttons */
+.ButtonForward			{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #FFFFFF; font-weight:bold; background-color:#EC2700; text-decoration:none; border:1px solid #000000; width:100px; height:18px; text-align:center; }
+.ButtonForward:Hover	{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #FFFFFF; font-weight:bold; background-color:#708090; text-decoration:none; border:1px solid #000000; width:100px; height:18px; text-align:center; }
+.ButtonBack				{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; text-decoration:none; font-weight:bold; }
+.SubmitPWD				{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #FFFFFF; font-weight:bold; background-color:#708090; text-decoration:none; border:1px solid #000000; width:130px; height:18px; text-align:center; }
+.stdButton 				{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #FFFFFF; font-weight:bold; background-color:#708090; text-decoration:none; border:1px solid #000000; width:130px; height:18px; text-align:center; }
+.stdButton:Hover		{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #D4D9DE; font-weight:bold; background-color:#333A48; text-decoration:none; border:1px solid #000000; width:100px; height:18px; text-align:center; }
+.EditLink				{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #333A48; text-decoration:none; font-weight:bold; }
+.LastAst					{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #708090; text-decoration:none; font-weight:bold; }
+
+/* Styles fuer Texte */
+.HeadLine			{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #FFFFFF; text-decoration:none; }
+.defaultHead		{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #333A48; text-decoration:none; font-weight:bold; }
+.defaultText		{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #333A48; text-decoration:none; }
+.HinweisText		{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #EC2700; text-decoration:none; font-weight:bold; }
+.LastModified		{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; text-decoration:none; z-index}
+
+/* Styles fuer Tabellen */
+.mainTable			{ background-color:#F1F2F4; text-decoration:none; border:1px solid #708090; }
+.bl					{ border-left:1px solid #708090; }
+.blo				{ border-left:1px solid #708090; border-top:1px solid #708090; }
+.bo					{ border-top:1px solid #708090; }
+.tableHead			{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #FFFFFF; background-color:#9DA8B3; text-decoration:none; font-weight:bold; padding-top:2px; padding-bottom:3px; }
+.tableHead2			{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #333A48; background-color:#D4D9DE; text-decoration:none; font-weight:bold; padding-top:2px; padding-bottom:3px; }
+.tableSubHead		{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #333A48; background-color:#FFFFFF; text-decoration:none; font-weight:bold; padding-top:2px; padding-bottom:3px; }
+.Level1				{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #333A48; text-decoration:none; font-weight:bold; }
+.Level2				{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #333A48; text-decoration:none; }
+
+/**********************************************************/
+/* checked css                                            */
+/**********************************************************/
+
+div.boxedSection {
+	color:#333a48;
+	background-color:#f1f2f4;
+	border:1px solid #333a48;
+	padding:10px;
+	margin:8px;
+}
+
+div.boxedSection div {
+	padding:2px 8px;
+}
+
+div.boxedSection div.header {
+	text-align:left;
+	padding:2px 8px 8px 8px;
+}
+
+div.boxedSection div.footer {
+	padding:8px 8px 2px 8px;
+}

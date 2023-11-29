@@ -1,0 +1,344 @@
+
+html, body, textarea {
+	background-color: #F0F3F4;
+	font-family: Arial, Sylfaen, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	color: #333333;
+}
+
+td, th {
+	font-family: Arial, Sylfaen, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	color: #330000;
+}
+
+a {
+	color: #333399;
+}
+
+
+form {
+	background-color: #F0F3F4;
+	font-family: Arial, Sylfaen, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+button.kb 
+{
+	background-color: rgb(102,0,0);	
+	border-color: rgb(153,153,102); 
+	color: white;
+}
+
+
+a.ButtonItem {
+  color : #000000;
+  text-decoration : none;
+  background-color : #FDFAD6;
+  margin: 4px;
+  padding: 3px;
+  border: thin outset;
+  width: 200px;
+  text-align: center;
+  font-weight :bold;
+  height : auto;
+  font-family: Arial, Sylfaen, Helvetica, sans-serif;
+}
+
+
+/**
+ *
+ */
+a.ButtonItem:hover {
+  color : #1133FF;
+  text-decoration :none;
+  background-color : #FEFCE7;
+  border: thin inset;
+}
+
+.workflow {
+	align:center;
+	width:970px; 
+	height:620px; 
+	overflow:scroll;
+	border:0px none;
+	margin:1em; 
+}
+
+.TableBasic
+{
+  height: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  left: 0px;
+  top: 0px;
+  border: 0px none;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+table.BorderGrid
+{
+	border-left: 1px solid #333A48;
+	border-top: 1px solid #333A48;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+	empty-cells: show;
+	border-collapse: collapse;
+	caption-side: top;
+}
+
+.BorderGrid .Border caption 
+{
+	caption-side: top;
+	text-align: left;
+	margin-top: 4em;
+	font-family: Arial; 
+	font-size: 14px; 
+	color: #333A48; 
+	font-weight:bold; 
+}
+
+.BorderGrid th
+{
+	font-family: Arial, Sylfaen, Helvetica, sans-serif; 
+	font-size: 12px; 
+	background-color: #D9B565;
+	
+	text-decoration: none; 
+	font-weight: bold; 
+	overflow: auto;
+	display: inline;
+	text-align: left;
+	padding-left: 10px;
+	border-right: 1px solid #333A48;
+	border-bottom: 1px solid #333A48;
+	padding-left: 10px;
+	padding-right: 10px;
+	clear: none;
+}
+
+.BorderGrid td
+{
+	font-family: Arial;
+	font-size: 12pt; 
+	background-color:#ECE3BE;
+	font-weight: bold;
+	color: #6E2E08;
+	text-decoration:none; 
+	font-weight:normal;
+	overflow: auto;
+	display: inline;
+	border-right: 1px solid #D9B565;
+	border-bottom: 1px solid #D9B565;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+pre.kb {
+	font-family: Arial, Sylfaen, Georgia, "Times New Roman", Times, serif;	
+	font-size: 12pt; 
+	background-color:#F0F3F4;
+	text-align:left;
+	color: #6E2E08;
+}
+
+
+.title {
+	font-family: Arial, Sylfaen, Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	line-height: 30px;
+  background-color: #990000; color: #FFFF66;
+}
+
+.subtitle {
+	font-family: Arial, Sylfaen, Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: bold;
+  color: #660000; font-style: oblique;
+}
+
+.header {
+	font-family: Arial, Sylfaen, Georgia, "Times New Roman", Times, serif;
+	font-size: 24px;
+	background-color: #990000;
+  color: #FFFF66;
+}
+
+.nav {
+	font-family: Arial, Sylfaen, Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #CCCC66;
+}
+
+.navLink {
+	font-family: Arial, Sylfaen, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #DEDECA;
+}
+
+a:hover {
+	color: red;
+	background-color: #F0F3F4;
+}
+
+.sidebar {
+	font-family: Arial, Sylfaen, Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	line-height: 18px;
+	padding: 3px;
+	background-color: #FFFF99;
+}
+
+.sidebarHeader {
+	font-family: Arial, Sylfaen, Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: #FFFF99;
+	background-color: #999933;
+ font-weight: bold;
+}
+
+.sidebarFooter {
+	font-family: Arial, Sylfaen, Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	line-height: 18px;
+	background-color: #FFFF99;
+ color: #990000;
+}
+
+.footer {
+  font-family: Arial, Sylfaen, Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 22px;
+	color: #333333;
+	background-color: #FFFF99;
+}
+
+.legal {
+	font-family: Arial, Sylfaen, Georgia, "Times New Roman", Times, serif;
+	font-size: 12pt;
+	color: #333333;
+}
+
+.box1 {
+	border-width: 2px;
+	border-color: #CCCCCC #333333 #333333 #CCCCCC;
+  	border-style: dotted;
+	}
+
+.promo {
+	font-family: Arial, Sylfaen, "Times New Roman", Times, serif;
+	color: #000033;
+}
+
+.titlebar {
+	font-family: Arial, Sylfaen, "Times New Roman", Times, serif;
+	font-size: 9px;
+	color: #FFFFFF;
+	background-color: #336699;
+}
+
+.dingbat {
+	font-family: Arial, Sylfaen, Georgia, "Times New Roman", Times, serif;
+	background-color: #CCCC99;
+ 	color: #660000; 
+ 	font-weight: bolder; 
+ 	font-size: medium;
+}
+
+.detail_question {
+	font-size: small;
+	font-family:  Arial, Sylfaen, Georgia, "Times New Roman", Times, serif;
+}
+
+.title_number {
+	lang:EN-GB;
+	font-family: Arial, sans-serif; 
+	font-style: italic; 
+	font-weight: 700;
+	color: #333399;
+}
+
+
+.finished {
+	lang:EN-GB;
+	font-family: Arial, sans-serif; 
+	font-weight: 700;
+	color: #333399;
+}
+
+
+.title_line {
+	border-bottom-style: solid;
+}              
+
+
+input.big {
+	width: 100px;
+}
+
+
+input.small {
+	width: 50px;
+}
+
+
+textarea.kb {
+	font-family: Arial, Sylfaen, Georgia, "Times New Roman", Times, serif;	
+	font-size: 12pt; 
+	background-color:#F0F3F4;
+	color: #6E2E08;
+
+}
+
+
+input.kbedit {
+	font-family: Arial, Sylfaen, Georgia, "Times New Roman", Times, serif;	
+	color: #6E2E08; 
+	background-color: #F0F3F4;
+	font-size: 15px;
+}
+
+
+input.kbbutton {
+	font-family: Arial, Sylfaen, Georgia, "Times New Roman", Times, serif;	
+	color: #6E2E08; 
+	background-color: #ECE3BE;
+	font-size: 15px;
+	font-weight :bold;
+}
+
+
+input.kbbutton2 {
+	font-family: Arial, Sylfaen, Georgia, "Times New Roman", Times, serif;	
+	color: #6E2E08; 
+	background-color: #F0F3F4;
+	font-size: 15px;
+}
+
+
+select.kb {
+	font-family: Arial, Sylfaen, Georgia, "Times New Roman", Times, serif;	
+	color: #6E2E08; 
+	background-color: #F0F3F4;
+	font-size: 15px;
+	font-weight :bold;
+}
+
+FIELDSET
+{
+	border-color:#D9B565;
+	border-width:1px;
+	color:black;
+}

@@ -1,0 +1,9 @@
+<%
+LiveJournalManager manager = client.getLiveJournalManager();
+%>
+
+<BODY>
+<form name="BodyForm" method="post" action="<%=TheApp.encodeURL(client.getUriForm(), response)%>">
+<input type="hidden" name="cmd" value="">
+<input type="hidden" name="subcmd" value="">
+<input type="hidden" name="target" value="">

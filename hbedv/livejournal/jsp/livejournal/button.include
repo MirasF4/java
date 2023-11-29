@@ -1,0 +1,70 @@
+-->
+
+<script language="JavaScript" type="text/JavaScript">
+
+	function back(f) {
+		f.cmd.value = "<%=manager.getCmd()%>";
+		f.subcmd.value = "<%=LiveJournal.SUB_CMD_BACK%>";
+		f.submit("");
+	}
+
+	function next(f) {
+		f.cmd.value = "<%=manager.getCmd()%>";
+		f.subcmd.value = "<%=LiveJournal.SUB_CMD_NEXT%>";
+		f.submit("");
+	}
+
+	function save(f) {
+		f.cmd.value = "<%=manager.getCmd()%>";
+		f.subcmd.value = "<%=LiveJournal.SUB_CMD_SAVE%>";
+		f.submit("");
+	}
+
+</script>
+
+
+
+<table align="center">
+	<tr style="position:relative;top:-8px;">
+		<td width="10px"></td>
+		<td width="70px" align="center">
+			<%
+			if (manager.getPage() > 1) { %>
+				<a href="#" onClick="javascript:back(BodyForm)">
+					<img src="<%=client.getUriImageGlobal("prev.jpg")%>" style="border:0;" alt="Previous">
+				</a>
+			<% } else { %>
+				<img src="<%=client.getUriImageGlobal("prev_disabled.jpg")%>" style="border:0;" alt="Previous">
+			<% } %>
+		</td>
+		<td width="70px" align="center">
+			<%
+			if (manager.getPage() < 3) { %>
+				<a href="#" onClick="javascript:next(BodyForm)">
+					<img src="<%=client.getUriImageGlobal("next.jpg")%>" style="border:0;" alt="Next">
+				</a>
+			<% } else { %>
+				<img src="<%=client.getUriImageGlobal("next_disabled.jpg")%>" style="border:0;" alt="Next">
+			<% } %>
+		</td>
+		<td width="70px" align="center">
+			<%
+			if (manager.getPage() == 3) { %>
+				<a href="#" onClick="javascript:save(BodyForm)">
+					<img src="<%=client.getUriImageGlobal("save.jpg")%>" style="border:0;" alt="Save">
+				</a>
+			<% } else { %>
+				<img src="<%=client.getUriImageGlobal("save_disabled.jpg")%>" style="border:0;" alt="Save">
+			<% } %>
+		
+		<td>
+		<td width="70px" align="center">
+			&nbsp;
+		</td>
+		
+	</tr>
+</table>
+
+
+
+<!--

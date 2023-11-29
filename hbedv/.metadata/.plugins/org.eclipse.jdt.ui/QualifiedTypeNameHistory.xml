@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.hbedv.db.ConnectionWrapper"/>
+<fullyQualifiedTypeName name="com.hbedv.db.livejournal.LiveJournalBean.AsmSurvey"/>
+<fullyQualifiedTypeName name="com.hbedv.frame.Util"/>
+<fullyQualifiedTypeName name="com.hbedv.db.livejournal.LiveJournalBean.AsmLaenderCode"/>
+<fullyQualifiedTypeName name="sun.security.provider.JavaKeyStore.CaseExactJKS"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletRequest"/>
+</qualifiedTypeNameHistroy>

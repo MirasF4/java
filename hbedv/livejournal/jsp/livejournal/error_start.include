@@ -1,0 +1,6 @@
+
+<%
+int errorQuestion = manager.getErrorQuestion();
+String errorText = manager.getErrorText();
+String idObject = manager.getIdObject(errorQuestion);
+%>

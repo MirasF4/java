@@ -1,0 +1,12 @@
+computeSourcePath=true
+configMode=serverFile
+contextsDir=C\:\\Program Files\\Apache Software Foundation\\Tomcat 8.0\\conf\\Catalina\\localhost
+eclipse.preferences.version=1
+managerUrl=http\://localhost\:8080/manager
+projectsInCp=RemoteSystemsTempFiles;
+projectsInSourcePath=kochbuch;
+tomcatBase=C\:\\Program Files\\Apache Software Foundation\\Tomcat 8.0
+tomcatConfigFile=C\:\\Program Files\\Apache Software Foundation\\Tomcat 8.0\\conf\\server.xml
+tomcatDir=C\:\\Program Files\\Apache Software Foundation\\Tomcat 8.0
+tomcatJRE=1537698686667
+tomcatVersion=tomcatV8

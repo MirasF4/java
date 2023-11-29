@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config date="1293963306307" shared_ur="file:configuration/org.eclipse.update/platform.xml" transient="false" version="3.0">
+<site enabled="true" policy="USER-EXCLUDE" updateable="true" url="file:../../Users/hubert.SOLIMP/.eclipse/org.eclipse.platform_3.3.0_1416090908/configuration/eclipse/">
+<feature id="org.eclipse.gef.sdk" plugin-identifier="org.eclipse.gef.source" url="features/org.eclipse.gef.sdk_3.3.2.v20080129/" version="3.3.2.v20080129">
+</feature>
+<feature id="org.eclipse.gef.source" url="features/org.eclipse.gef.source_3.3.2.v20080129/" version="3.3.2.v20080129">
+</feature>
+<feature id="org.eclipse.gef" plugin-version="3.2.102.v20080116" url="features/org.eclipse.gef_3.3.2.v20080129/" version="3.3.2.v20080129">
+</feature>
+</site>
+</config>

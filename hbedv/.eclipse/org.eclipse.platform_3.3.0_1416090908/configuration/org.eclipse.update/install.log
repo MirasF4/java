@@ -1,0 +1,11 @@
+
+!CONFIGURATION 1293960184103 Sun Jan 02 10:23:04 CET 2011
+!ACTIVITY 1293962850440 Jän 02, 2011 11:07:30.440 file:/C:/Program Files (x86)/Eclipse/ site-install success
+
+!CONFIGURATION 1293963306307 Sun Jan 02 11:15:06 CET 2011
+!ACTIVITY 1293963113571 Jän 02, 2011 11:11:53.571 file:/C:/Users/hubert.SOLIMP/.eclipse/org.eclipse.platform_3.3.0_1416090908/configuration/eclipse/ site-install success
+!ACTIVITY 1293963213941 Jän 02, 2011 11:13:33.941 org.eclipse.gef_3.3.2.v20080129 feature-install success
+!ACTIVITY 1293963304731 Jän 02, 2011 11:15:04.731 org.eclipse.gef_3.3.2.v20080129 feature-enable success
+!ACTIVITY 1293963304731 Jän 02, 2011 11:15:04.731 org.eclipse.gef.sdk_3.3.2.v20080129 feature-install success
+!ACTIVITY 1293963306198 Jän 02, 2011 11:15:06.198 org.eclipse.gef.source_3.3.2.v20080129 feature-enable success
+!ACTIVITY 1293963306198 Jän 02, 2011 11:15:06.198 org.eclipse.gef.sdk_3.3.2.v20080129 feature-enable success

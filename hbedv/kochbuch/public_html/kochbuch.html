@@ -1,0 +1,30 @@
+<html>
+<head>
+
+<title></title>
+</head>
+
+
+<script type="text/javascript" language="javascript">
+	function startMyApp() {
+		//document.loginForm.bs_width.value  = screen.width;
+		//document.loginForm.bs_height.value = screen.height;
+		document.getElementById('loginForm').submit();
+	}
+
+</script>
+
+<body onload="javascript:startMyApp()">
+
+<form id="loginForm" name="loginForm" method="post" action="/kochbuch/kochbuch" target="_top">
+	<input type="hidden" name="bs_width" value="0">
+	<input type="hidden" name="bs_height" value="0">
+	<input type="hidden" name="cmd" value="login_all">
+	<input type="hidden" name="id_menue" value="0">
+	
+	
+</form>
+
+
+</body>
+</html>

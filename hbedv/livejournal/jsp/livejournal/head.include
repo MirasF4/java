@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<%@ page errorPage="../errorpage.jsp" %>
+<%@ page import="com.hbedv.frame.*" %>
+<%@ page import="com.hbedv.livejournal.*" %>
+<%@ page import="com.hbedv.db.livejournal.*" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.*" %>
+
+<%
+	ClientLiveJournal client=(ClientLiveJournal)session.getAttribute(session.getId());
+	if(client == null) throw new Exception("client == null");
+%>
+
+<html>
+<head>
+
+<link rel="STYLESHEET" type="text/css" href="css/livejournal.css">
+<link rel="SHORTCUT ICON" href="images/umfrage.ico">
+<link rel="ICON" href="images/umfrage.ico" type="image/x-icon">
+
+<META NAME="Title" CONTENT="Research LiveJournal">
+<META NAME="Author" CONTENT="Michaela Beham">
+<META NAME="Publisher" CONTENT="Hubert Beham">
+<META NAME="Copyright" CONTENT="Michaela and Hubert Beham">
+<META NAME="Revisit" CONTENT="After 10 days">
+<META NAME="Keywords" CONTENT="LiveJournal, Umfrage">
+<META NAME="Description" CONTENT="Online questionnaire - Social Networking in Online Communities - LiveJournal friends - from Michaela Beham">
+<META NAME="Abstract" CONTENT="LiveJournal">
+<META NAME="page-topic" CONTENT="LiveJournal">
+<META NAME="audience" CONTENT="all">
+<META NAME="Robots" CONTENT="INDEX,FOLLOW">
+<META NAME="Language" CONTENT="English">
+<META NAME="Content-language" content="EN">
+<META NAME="pragma" content="no-cache">
+<META NAME="Page-type" content="Private Page">
+
+<META HTTP-EQUIV="pragma" content="no-cache">
+<META HTTP-EQUIV="cache-control" CONTENT="no-cache">
+<META HTTP-EQUIV="expires" content="0">
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<META HTTP-EQUIV="Content-Script-Type" content="text/javascript">
+<META HTTP-EQUIV="Content-Style-Type" content="text/css">
+
+<title>LiveJournal</title>
+
+
+
+
+</head>

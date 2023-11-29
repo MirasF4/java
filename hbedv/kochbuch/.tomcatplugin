@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomcatProjectProperties>
+    <rootDir>/</rootDir>
+    <exportSource>false</exportSource>
+    <reloadable>true</reloadable>
+    <redirectLogger>false</redirectLogger>
+    <updateXml>true</updateXml>
+    <warLocation></warLocation>
+    <extraInfo></extraInfo>
+    <webPath>/kochbuch</webPath>
+    <webClassPathEntries>
+        <webClassPathEntry>/kochbuch/WEB-INF/classes</webClassPathEntry>
+        <webClassPathEntry>/kochbuch/work</webClassPathEntry>
+        <webClassPathEntry>C:/Program Files (x86)/Java/jre7/lib/charsets.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Program Files (x86)/Java/jre7/lib/ext/access-bridge-32.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Program Files (x86)/Java/jre7/lib/ext/dnsns.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Program Files (x86)/Java/jre7/lib/ext/jaccess.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Program Files (x86)/Java/jre7/lib/ext/localedata.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Program Files (x86)/Java/jre7/lib/ext/sunec.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Program Files (x86)/Java/jre7/lib/ext/sunjce_provider.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Program Files (x86)/Java/jre7/lib/ext/sunmscapi.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Program Files (x86)/Java/jre7/lib/ext/sunpkcs11.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Program Files (x86)/Java/jre7/lib/ext/zipfs.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Program Files (x86)/Java/jre7/lib/jce.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Program Files (x86)/Java/jre7/lib/jfr.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Program Files (x86)/Java/jre7/lib/jsse.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Program Files (x86)/Java/jre7/lib/resources.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Program Files (x86)/Java/jre7/lib/rt.jar</webClassPathEntry>
+    </webClassPathEntries>
+</tomcatProjectProperties>

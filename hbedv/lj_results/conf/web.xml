@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app>
+    <servlet>
+        <servlet-name>LjResultsServlet</servlet-name>
+        <servlet-class>com.hbedv.lj_results.LjResultsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LjResultsServlet</servlet-name>
+        <url-pattern>/lj_results</url-pattern>
+    </servlet-mapping>
+</web-app>
+
+
+

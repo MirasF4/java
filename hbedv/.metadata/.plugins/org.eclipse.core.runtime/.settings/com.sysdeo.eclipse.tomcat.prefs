@@ -1,0 +1,14 @@
+#Thu Sep 27 21:27:51 CEST 2018
+fixTomcatHomeBug=fixed
+contextsDir=C\:\\Program Files (x86)\\Apache Software Foundation\\Tomcat 6.0\\conf\\Catalina\\localhost
+tomcatDir=C\:\\Program Files (x86)\\Apache Software Foundation\\Tomcat 6.0
+managerUser=admin
+configMode=serverFile
+tomcatJRE=1537698686667
+tomcatConfigFile=C\:\\Program Files (x86)\\Apache Software Foundation\\Tomcat 6.0\\conf\\server.xml
+eclipse.preferences.version=1
+managerPassword=sebtp1970
+tomcatVersion=tomcatV6
+tomcatBase=C\:\\Program Files (x86)\\Apache Software Foundation\\Tomcat 6.0
+managerUrl=http\://localhost\:8080/manager
+projectsInSourcePath=kochbuch;

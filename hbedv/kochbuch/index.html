@@ -1,0 +1,23 @@
+<html>
+<head>
+<SCRIPT>
+	onload = function() {
+		document.loginForm.bs_width.value  = screen.width;
+		document.loginForm.bs_height.value = screen.height;
+		document.loginForm.submit();
+  	}
+</SCRIPT>
+<title></title>
+</head>
+
+<form NAME="loginForm" METHOD="post" ACTION="/kochbuch/kochbuch" target="_top">
+	<input type="hidden" name="bs_width" value="0">
+	<input type="hidden" name="bs_height" value="0">
+	<input type="hidden" name="cmd" value="login_all">
+	<input type="hidden" name="id_menue" value="0">
+
+</form>
+</div>
+
+</body>
+</html>
