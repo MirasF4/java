@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+D:\Projects\java\FrameHB\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3094263911.index
+3415646103.index
+984778668.index
+3211597839.index
+3209569609.index
